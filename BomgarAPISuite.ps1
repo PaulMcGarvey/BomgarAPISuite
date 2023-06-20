@@ -221,7 +221,7 @@ function New-BomgarJumpClient {
     )
     BEGIN {
         Write-Verbose "New-BomgarJumpClient"
-        $endpoint = "/api/config/v1/jump-client/installer"
+        $endpoint = "api/config/v1/jump-client/installer"
         # The post body for the creation of the jump client - the jump_group_id 1 refers to the 'Workplace' jump group
         $body = @{
             "name" = ""
