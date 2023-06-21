@@ -250,13 +250,8 @@ function New-BomgarJumpClient {
             'method' = 'Post'
             'body' = $body
         }
-        try {
-            $result = Invoke-APIEndpoint @Params
-            $result
-        }
-        catch {
-            $result
-        }
+        $result = Invoke-APIEndpoint @Params
+        $result
     }
 } # New-BomgarJumpClient
 
