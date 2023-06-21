@@ -1,5 +1,10 @@
 $baseUrl = ""
 
+function New-Timestamp {
+    $date = Get-date -Format 'yyyy/MM/dd HH:mm:ss:ff'
+    "[$date]"
+} # New-Timestamp
+
 function Invoke-APIEndpoint {
     [CmdletBinding()]
     param (
