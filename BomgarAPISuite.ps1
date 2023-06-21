@@ -1,3 +1,5 @@
+$baseUrl = ""
+
 function Invoke-APIEndpoint {
     [CmdletBinding()]
     param (
@@ -104,7 +106,7 @@ function New-BomgarAPIHeader {
     param(
     [parameter(Mandatory=$false,
                ValueFromPipelineByPropertyName=$true)]
-    [System.Uri]$baseUrl="",
+    [System.Uri]$baseUrl=$baseUrl,
     [parameter(Mandatory=$true)]
     [string]$clientId,
     [parameter(Mandatory=$true)]
@@ -160,7 +162,7 @@ function Get-BomgarJumpClient {
     [System.Collections.Hashtable]$header,
     [parameter(Mandatory=$false,
                ValueFromPipelineByPropertyName=$true)]
-    [System.Uri]$baseUrl="",
+    [System.Uri]$baseUrl=$baseUrl,
     [parameter(Mandatory=$false)]
     [System.Collections.Hashtable]$queryParameter,
     [parameter(Mandatory=$false,
@@ -207,7 +209,7 @@ function New-BomgarJumpClient {
     [parameter(Mandatory=$true)]
     [System.Collections.Hashtable]$header,
     [parameter(Mandatory=$false)]
-    [System.Uri]$baseUrl="",
+    [System.Uri]$baseUrl=$baseUrl,
     [parameter(Mandatory=$false)]
     [Int32]$jumpGroupID = 1,
     [parameter(Mandatory=$false)]
@@ -263,7 +265,7 @@ function Remove-BomgarJumpClient {
     [System.Collections.Hashtable]$header,
     [parameter(Mandatory=$false,
                ValueFromPipelineByPropertyName=$true)]
-    [System.Uri]$baseUrl="",
+    [System.Uri]$baseUrl=$baseUrl,
     [parameter(Mandatory=$true,
                ValueFromPipelineByPropertyName=$true)]
     [System.Int64]$id
@@ -292,7 +294,7 @@ function Get-BomgarJumpClientInstaller {
     [System.Collections.Hashtable]$header,
     [parameter(Mandatory=$false,
                ValueFromPipelineByPropertyName=$true)]
-    [System.Uri]$baseUrl="",
+    [System.Uri]$baseUrl=$baseUrl,
     [parameter(Mandatory=$true,
                ValueFromPipelineByPropertyName=$true)]
     [ValidateSet('linux-64','linux-64-headless','raspberry-pi-32-headless','mac-dmg','mac-zip','windows-64','windows-64-msi','windows-32','windows32-msi')]
