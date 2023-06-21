@@ -104,7 +104,7 @@ function New-BomgarAPIHeader {
     param(
     [parameter(Mandatory=$false,
                ValueFromPipelineByPropertyName=$true)]
-    [System.Uri]$baseUrl="https://fanduelgroup.beyondtrustcloud.com",
+    [System.Uri]$baseUrl="",
     [parameter(Mandatory=$true)]
     [string]$clientId,
     [parameter(Mandatory=$true)]
